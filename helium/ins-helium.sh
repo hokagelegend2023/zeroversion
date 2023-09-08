@@ -14,7 +14,7 @@ wget -q -O /usr/bin/m-system https://raw.githubusercontent.com/hokagelegend2023/
 chmod +x /usr/bin/m-system
 rm -rf /usr/bin/wbmn
 echo -e "\e[1;32m Start download Panel Webmin.. \e[0m"
-wget -q -O /usr/bin/wbmn https://github.com/hokagelegend2023/zeroversion/blob/main/helium/webmin/wbmn.sh
+wget -q -O /usr/bin/wbmn https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/helium/webmin/wbmn.sh
 chmod +x /usr/bin/wbmn
 rm -rf /usr/bin/helium
 echo -e "\e[1;32m Start download Panel ADS Block.. \e[0m"
