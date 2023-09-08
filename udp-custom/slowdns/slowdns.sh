@@ -22,9 +22,9 @@ rm nsdomain
 #input nameserver manual to cloudflare
 #read -rp "Masukkan domain: " -e domain
 
-read -rp "Masukkan Subdomain Yang Dipakai Host Sekarang: " -e sub
+read -rp "Masukkan DOMAIN Yang Dipakai Host Sekarang: " -e sub
 SUB_DOMAIN=${sub}
-NS_DOMAIN=ns-${SUB_DOMAIN}
+NS_DOMAIN=${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
 
 nameserver=$(cat /root/nsdomain)
@@ -69,10 +69,6 @@ chmod +x /etc/slowdns/server.key
 chmod +x /etc/slowdns/server.pub
 chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
-
-cd
-#wget -q -O /etc/systemd/system/client-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/client-sldns.service"
-#wget -q -O /etc/systemd/system/server-sldns.service "https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/server-sldns.service"
 
 cd
 #install client-sldns.service
