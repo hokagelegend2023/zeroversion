@@ -132,6 +132,6 @@ systemctl restart client-sldns
 systemctl restart server-sldns
 
 echo -e "\e[1;32m Success.. \e[0m"
-echo "Silahkan Pointing Type NS $nameserver Dengan Target $domen"
+echo "Silahkan Pointing Type $nameserver Dengan Target $domen"
 sleep 10
 
