@@ -20,8 +20,6 @@
 - UNDER ATTACK MODE : OFF<br>
 <br>
 
-# Pointing
-![Pointing](https://raw.githubusercontent.com/givpn/AutoScriptXray/master/image/pointing.png)
 
 ## Service & Port:
 <br>
