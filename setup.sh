@@ -206,19 +206,15 @@ gg="AM"
 fi
 curl -sS ipv4.icanhazip.com > /etc/myipvps
 echo ""
-echo "=================================================================="  | tee -a log-install.txt
-echo "      ___                                    ___         ___      "  | tee -a log-install.txt
-echo "     /  /\        ___           ___         /  /\       /__/\     "  | tee -a log-install.txt
-echo "    /  /:/_      /  /\         /__/\       /  /::\      \  \:\    "  | tee -a log-install.txt
-echo "   /  /:/ /\    /  /:/         \  \:\     /  /:/\:\      \  \:\   "  | tee -a log-install.txt
-echo "  /  /:/_/::\  /__/::\          \  \:\   /  /:/~/:/  _____\__\:\  "  | tee -a log-install.txt
-echo " /__/:/__\/\:\ \__\/\:\__   ___  \__\:\ /__/:/ /:/  /__/::::::::\ "  | tee -a log-install.txt
-echo " \  \:\ /~~/:/    \  \:\/\ /__/\ |  |:| \  \:\/:/   \  \:\~~\~~\/ "  | tee -a log-install.txt
-echo "  \  \:\  /:/      \__\::/ \  \:\|  |:|  \  \::/     \  \:\  ~~~  "  | tee -a log-install.txt
-echo "   \  \:\/:/       /__/:/   \  \:\__|:|   \  \:\      \  \:\      "  | tee -a log-install.txt
-echo "    \  \::/        \__\/     \__\::::/     \  \:\      \  \:\     "  | tee -a log-install.txt
-echo "     \__\/                       ~~~~       \__\/       \__\/ 1.0 "  | tee -a log-install.txt
-echo "=================================================================="  | tee -a log-install.txt
+echo "======================================================================================"   | tee -a log-install.txt
+echo "   _    _  ____  _  __          _____ ______   _      ______ _____ ______ _   _ _____     | tee -a log-install.txt 
+echo "  | |  | |/ __ \| |/ /    /\   / ____|  ____| | |    |  ____/ ____|  ____| \ | |  __ \    | tee -a log-install.txt
+echo "  | |__| | |  | | ' /    /  \ | |  __| |__    | |    | |__ | |  __| |__  |  \| | |  | |   | tee -a log-install.txt
+echo "  |  __  | |  | |  <    / /\ \| | |_ |  __|   | |    |  __|| | |_ |  __| | . ` | |  | |   | tee -a log-install.txt
+echo "  | |  | | |__| | . \  / ____ \ |__| | |____  | |____| |___| |__| | |____| |\  | |__| |   | tee -a log-install.txt
+echo "  |_|  |_|\____/|_|\_\/_/    \_\_____|______| |______|______\_____|______|_| \_|_____/    | tee -a log-install.txt
+echo "                                                                                          | tee -a log-install.txt
+echo "======================================================================================"   | tee -a log-install.txt
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
@@ -242,7 +238,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/givpn-----------------------------" | tee -a log-install.txt
+echo "-------------------HOKAGE LEGEND WA: 087726917005-----------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
