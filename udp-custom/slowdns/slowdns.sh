@@ -1,8 +1,6 @@
 # =========================================
 # Quick Setup | Script Setup Manager
-# Edition : Stable Edition 1.0
-# Auther  : givpn
-# Kuota Habisss
+# Edition : Zero Version
 # (C) Copyright 2023
 # =========================================
 # pewarna hidup
