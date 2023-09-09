@@ -19,9 +19,11 @@ rm nsdomain
 
 #input nameserver manual to cloudflare
 #read -rp "Masukkan domain: " -e domain
-
+echo ""
+yellow "###### MASUKAN DOMAIN NYA SAJA OTOMATIS AKAN DI TAMBAHKAN NS."
+echo " "
 read -rp "Masukkan DOMAIN Yang Dipakai Host Sekarang: " -e sub
-SUB_DOMAIN=${sub}
+SUB_DOMAIN=ns.${sub}
 NS_DOMAIN=${SUB_DOMAIN}
 echo $NS_DOMAIN > /root/nsdomain
 
