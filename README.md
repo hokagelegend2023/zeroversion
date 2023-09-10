@@ -67,7 +67,7 @@ apt update && apt upgrade -y && reboot
 ```
 - Step 2 for (ubuntu) directly install
 ```
-apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/hokagelegend2023/original/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
+apt --fix-missing update && apt update && apt upgrade -y && apt install -y wget screen && wget -q https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
 ```
 
 
