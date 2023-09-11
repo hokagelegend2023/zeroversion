@@ -78,7 +78,7 @@ export GREEN='\033[0;32m'
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
-    status_ws="${GREEN}ON${NC}"
+    status_ws="${GREEN}RUN${NC}"
 else
     status_ws="${RED}OFF${NC}"
 fi
@@ -86,7 +86,7 @@ fi
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-    status_nginx="${GREEN}ON${NC}"
+    status_nginx="${GREEN}RUN${NC}"
 else
     status_nginx="${RED}OFF${NC}"
 fi
@@ -94,7 +94,7 @@ fi
 # // SSH Websocket Proxy
 xray=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $xray == "running" ]]; then
-    status_xray="${GREEN}ON${NC}"
+    status_xray="${GREEN}RUN${NC}"
 else
     status_xray="${RED}OFF${NC}"
 fi
@@ -161,7 +161,7 @@ uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/hokagelegend2023/ijinpremium/main/versi)
-if [ "$Isadmin" = "RUN" ]; then
+if [ "$Isadmin" = "ON" ]; then
 uis="${GREEN}Premium User$NC"
 else
 uis="${RED}Free Version$NC"
@@ -177,26 +177,26 @@ echo -e "$COLOR1 $NC ISP & City     : $ISP & $CITY"
 echo -e "$COLOR1 $NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "$COLOR1 $NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1<<<<──────────────────────────────────────────────────>>>>${NC}"
-echo -e "$COLOR1 #####################################################################${NC}"
+echo -e "$COLOR1 ###################################################### ${NC}"
 echo -e "$COLOR1 #$NC [ SSH WS : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1#$NC"
-echo -e "$COLOR1 #####################################################################${NC}"
-echo -e "$COLOR1 ######################################################################${NC}"
-echo -e "  ${COLOR1}[01]${NC} • SSHWS   [${YELLOW}Menu${NC}]   ${COLOR1}[07]${NC} • THEME    [${YELLOW}Menu${NC}]  $COLOR1│$NC"   
-echo -e "  ${COLOR1}[02]${NC} • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[08]${NC} • BACKUP   [${YELLOW}Menu${NC}]  $COLOR1│$NC"  
-echo -e "  ${COLOR1}[03]${NC} • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[09]${NC} • ADD HOST/DOMAIN  $COLOR1│$NC"  
-echo -e "  ${COLOR1}[04]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1│$NC"  
-echo -e "  ${COLOR1}[05]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
-echo -e "  ${COLOR1}[06]${NC} • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "$COLOR1 ###################################################### ${NC}"
+echo -e "$COLOR1                                                                      ${NC}"
+echo -e "$COLOR1#################################################### ${NC}"
+echo -e "${COLOR1}#[01]${NC} • SSHWS   [${YELLOW}Menu${NC}]   ${COLOR1}[07]${NC} • THEME    [${YELLOW}Menu${NC}]  $COLOR1#$NC"   
+echo -e "${COLOR1}#[02]${NC} • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[08]${NC} • BACKUP   [${YELLOW}Menu${NC}]  $COLOR1#$NC"  
+echo -e "${COLOR1}#[03]${NC} • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[09]${NC} • ADD HOST/DOMAIN  $COLOR1#$NC"  
+echo -e "${COLOR1}#[04]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1#$NC"  
+echo -e "${COLOR1}#[05]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1#$NC"
+echo -e "${COLOR1}#[06]${NC} • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1#$NC"
 if [ "$Isadmin" = "ON" ]; then
-echo -e "                                                  $COLOR1│$NC"
-echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "${COLOR1}#[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1#$NC"
 ressee="menu-ip"
 bottt="menu-bot"
 else
 ressee="menu"
 bottt="menu"
 fi
-echo -e "$COLOR1 ##############################################################${NC}"
+echo -e "$COLOR1##################################################${NC}"
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
@@ -215,20 +215,22 @@ datediff() {
     echo -e "$COLOR1│$NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
-
-echo -e "$COLOR1 ################################################################## $NC"
-echo -e "$COLOR1 # $NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
-echo -e "$COLOR1 # $NC Client Name : $Name"
+echo -e "$RED                                                                          ${NC}"
+echo -e "$COLOR1 #############################################$NC"
+echo -e "$COLOR1 # $NC Version     : ${COLOR1}$(cat /opt/.ver) Latest Version${NC}   #$NC"
+echo -e "$COLOR1 # $NC Client Name : $Name                     #$NC"
 if [ $exp \> 1000 ];
 then
-    echo -e "$COLOR1│$NC License     : Lifetime"
+echo -e "$COLOR1 # $NC License     : Lifetime                   #$NC"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "$COLOR1 ################################################################## $NC"
-echo -e "$COLOR1 #################### BY #################### ${NC}"
+echo -e "$COLOR1 #############################################$NC"
+echo -e "$COLOR1                                                 $NC"
+echo -e "$COLOR1                                                 $NC"
+echo -e "$COLOR1 #################### BY ################ ${NC}"
 echo -e "$COLOR1 # ${NC}        • HOKAGE LEGEND •            $COLOR1#$NC"
-echo -e "$COLOR1 ############################################ ${NC}" 
+echo -e "$COLOR1 ######################################## ${NC}" 
 echo -e ""
 echo -ne " Select menu : "; read opt
 case $opt in
