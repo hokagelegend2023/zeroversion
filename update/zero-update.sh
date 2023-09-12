@@ -69,11 +69,14 @@ red "Permission Denied!"
 exit 0
 fi
 
-**** UPDATE MENU ****
+### UPDATE MENU ###
 cd /usr/bin
 wget -O menu-vmess "https://raw.githubusercontent.com/hokagelegend2023/original/main/update/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/hokagelegend2023/original/main/update/menu-vless.sh"
+wget -O info "https://raw.githubusercontent.com/hokagelegend2023/original/main/update/info.sh"
 
 
 chmod +x menu-vmess
 chmod +x menu-vless
+chmod +x info
+
