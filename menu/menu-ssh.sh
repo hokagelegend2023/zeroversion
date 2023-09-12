@@ -10,7 +10,7 @@ COLBG1="$(cat /etc/hokagevpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/hokagelegend2023/ipmini/main/ijin > /root/tmp
+    curl -sS https://raw.githubusercontent.com/hokagelegend2023/ijinpremium/main/zeroip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -28,7 +28,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/ipmini/main/ijin | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/ijinpremium/main/zeroip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -45,7 +45,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/ipmini/main/ijin | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/hokagelegend2023/ijinpremium/main/zeroip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -216,7 +216,7 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 if [ -f "/etc/systemd/system/sshws.service" ]; then
 clear
 else
-wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/hokagelegend2023/original/main/ssh/proxy3.js"
+wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/ssh/proxy3.js"
 cat <<EOF > /etc/systemd/system/sshws.service
 [Unit]
 Description=WSenabler
@@ -615,7 +615,7 @@ echo -e " $COLOR1┌────────────────────
  $COLOR1│$NC   ${COLOR1}[01]${NC} • ADD SSH         ${COLOR1}[05]${NC} • DELETE SSH${NC}    $COLOR1│$NC
  $COLOR1│$NC   ${COLOR1}[02]${NC} • TRIAL SSH       ${COLOR1}[06]${NC} • RENEW SSH${NC}     $COLOR1│$NC
  $COLOR1│$NC   ${COLOR1}[03]${NC} • USER ONLINE     ${COLOR1}[07]${NC} • USERS LIST${NC}    $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[04]${NC} • ENABLE WS                            $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[04]${NC} • ENABLE WS       ${COLOR1}[08]${NC} • AUTO KILL${NC}     $COLOR1│$NC
  $COLOR1│$NC                                              ${NC} $COLOR1│$NC
  $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
@@ -633,6 +633,7 @@ case $opt in
 05 | 5) clear ; delssh ;;
 06 | 6) clear ; renewssh ;;
 07 | 7) clear ; memberssh ;;
+08 | 8) clear ; autokill ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-ssh ;;
 esac

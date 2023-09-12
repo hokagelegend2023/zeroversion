@@ -330,7 +330,7 @@ wget -O m-ssws "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/m
 wget -O m-trojan "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/menu/m-trojan.sh"
 
 # menu ssh ovpn
-wget -O m-sshovpn "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/menu/m-sshovpn.sh"
+wget -O menu-ssh "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/menu/menu-ssh.sh"
 wget -O usernew "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/ssh/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/ssh/trial.sh"
 wget -O renew "https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/ssh/renew.sh"
@@ -367,7 +367,7 @@ chmod +x clearcache
 chmod +x m-ssws
 chmod +x m-trojan
 
-chmod +x m-sshovpn
+chmod +x menu-ssh
 chmod +x usernew
 chmod +x trial
 chmod +x renew
