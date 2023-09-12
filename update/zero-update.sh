@@ -75,3 +75,11 @@ fi
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
 
+#### MENU UPDATE
+echo -e " [INFO] Downloading Update File"
+
+cd /usr/bin
+
+wget -O info "https://raw.githubusercontent.com/hokagelegend2023/original/main/update/info.sh"
+
+chmod +x info
