@@ -174,7 +174,9 @@ echo -e "$COLOR1│$NC  SSL/TLS    :$ssl"
 echo -e "$COLOR1│$NC  UDPGW      : 7100-7300" 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  GET wss://who.int/ HTTP/1.1[crlf]Host: $domen [crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "$COLOR1   GET wss://who.int/ HTTP/1.1[crlf]             ${NC}"
+echo -e "$COLOR1   Host: $domen [crlf]Upgrade: websocket         ${NC}"
+echo -e "$COLOR1  [crlf][crlf]                                   ${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}              • HOKAGE LEGEND •            $COLOR1│$NC"
@@ -612,11 +614,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • SSH PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
- $COLOR1│$NC   ${COLOR1}[01]${NC} • ADD SSH         ${COLOR1}[05]${NC} • DELETE SSH${NC}    $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[02]${NC} • TRIAL SSH       ${COLOR1}[06]${NC} • RENEW SSH${NC}     $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[03]${NC} • USER ONLINE     ${COLOR1}[07]${NC} • USERS LIST${NC}    $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[04]${NC} • ENABLE WS       ${COLOR1}[08]${NC} • AUTO KILL${NC}     $COLOR1│$NC
- $COLOR1│$NC                                              ${NC} $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[01]${NC} • ADD SSH            ${COLOR1}[05]${NC} • DELETE SSH${NC}    $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[02]${NC} • TRIAL SSH          ${COLOR1}[06]${NC} • RENEW SSH${NC}     $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[03]${NC} • USER ONLINE        ${COLOR1}[07]${NC} • USERS LIST${NC}    $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[04]${NC} • ENABLE WS          ${COLOR1}[08]${NC} • AUTO KILL${NC}     $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[09]${NC} • CHECK MULTI LOGIN  ${COLOR1}[10]${NC} • LOCK USER${NC}     $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[11]${NC} • UNLOCK USER        ${COLOR1}                               $COLOR1│$NC
+ $COLOR1│$NC                                           ${NC} $COLOR1│$NC
  $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
@@ -634,6 +638,8 @@ case $opt in
 06 | 6) clear ; renewssh ;;
 07 | 7) clear ; memberssh ;;
 08 | 8) clear ; autokill ;;
+09 | 9) clear ; ceklim ;;
+10 | 10)clear ; user-lock ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-ssh ;;
 esac
