@@ -265,6 +265,14 @@ sleep 0.5
 clear
 wget https://raw.githubusercontent.com/hokagelegend2023/vpnpremium/main/udp-custom/udp.sh && chmod +x udp.sh && ./udp.sh
 
+#install UPDATE MENU
+echo -e "\e[33m-----------------------------------\033[0m"
+echo -e "$BGreen    Install Update Menu            $NC"
+echo -e "\e[33m-----------------------------------\033[0m"
+sleep 0.5
+clear
+wget https://raw.githubusercontent.com/hokagelegend2023/zeroversion/main/update/zero-update.sh && chmod +x zero-update.sh && ./zero-update.sh
+clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
