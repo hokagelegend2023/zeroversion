@@ -203,6 +203,8 @@ echo "$pp" > /root/domain
 echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
+echo "$pp" > /etc/xray/scdomain
+echo "$pp" > /etc/v2ray/domain
 echo "IP=$pp" > /var/lib/hokagevpn-pro/ipvps.conf
 
 #THEME RED
